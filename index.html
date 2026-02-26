@@ -343,10 +343,8 @@ window.scrollTo({top:0,behavior:"smooth"});
 </script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
 <script>
-emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.init("PizZS9bEBgUffPzm1");
 
 const form = document.getElementById("contact-form");
 
@@ -354,9 +352,9 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
 
     emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        form   // 🔥 THIS IS THE FIX
+        "service_k6f5exf",
+        "template_j3vub6g",
+        form   
     )
     .then(function() {
         alert("Message Sent Successfully!");
@@ -371,5 +369,6 @@ form.addEventListener("submit", function(event) {
 </body>
 
 </html>
+
 
 
