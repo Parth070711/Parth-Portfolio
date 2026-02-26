@@ -344,31 +344,41 @@ window.scrollTo({top:0,behavior:"smooth"});
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
 <script>
-emailjs.init("PizZS9bEBgUffPzm1");
+document.addEventListener("DOMContentLoaded", function() {
 
-const form = document.getElementById("contact-form");
+    emailjs.init("YOUR_PUBLIC_KEY");  // 🔥 replace this
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
+    const form = document.querySelector("#contact-form");
 
-    emailjs.sendForm(
-        "service_k6f5exf",
-        "template_j3vub6g",
-        form   
-    )
-    .then(function() {
-        alert("Message Sent Successfully!");
-        form.reset();
-    })
-    .catch(function(error) {
-        console.error("FAILED...", error);
-        alert("Failed to send message.");
+    if (!form) {
+        console.error("Form not found!");
+        return;
+    }
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm(
+            "YOUR_SERVICE_ID",   // 🔥 replace this
+            "YOUR_TEMPLATE_ID",  // 🔥 replace this
+            document.querySelector("#contact-form")
+        )
+        .then(function(response) {
+            alert("Message Sent Successfully!");
+            form.reset();
+        })
+        .catch(function(error) {
+            console.error("EmailJS Error:", error);
+            alert("Failed to send message. Check console.");
+        });
     });
+
 });
 </script>
 </body>
 
 </html>
+
 
 
 
