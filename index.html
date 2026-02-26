@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Parth Savaliya | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
+overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+background:#1e293b;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h1{
+color:#38bdf8;
+animation: glow 3s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 5px #38bdf8; }
+to{ text-shadow:0 0 20px #38bdf8; }
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* SECTIONS */
+section{
+padding:80px;
+opacity:0;
+transform:translateY(40px);
+transition:all 0.8s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+margin-bottom:20px;
+color:#38bdf8;
+}
+
+/* CARDS */
+.profile-box,.card{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+margin-bottom:20px;
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 0 20px rgba(56,189,248,0.4);
+}
+
+/* TABLE */
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+}
+
+table,th,td{
+border:1px solid #334155;
+}
+
+th,td{
+padding:12px;
+}
+
+th{
+background:#334155;
+}
+
+/* CONTACT FORM */
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border-radius:8px;
+border:none;
+background:#334155;
+color:white;
+}
+
+input:focus,textarea:focus{
+outline:none;
+box-shadow:0 0 10px #38bdf8;
+}
+
+button{
+padding:12px;
+border:none;
+border-radius:8px;
+background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+color:white;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+box-shadow:0 0 15px #38bdf8;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+background:#1e293b;
+margin-top:40px;
+}
+
+/* BACK TO TOP */
+#topBtn{
+position:fixed;
+bottom:30px;
+left:30px;
+display:none;
+width:50px;
+height:50px;
+background:linear-gradient(135deg,#38bdf8,#0ea5e9);
+border:none;
+border-radius:50%;
+color:white;
+font-size:20px;
+cursor:pointer;
+box-shadow:0 0 15px rgba(56,189,248,0.7);
+transition:0.3s;
+}
+
+#topBtn:hover{
+transform:scale(1.15);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+section{padding:40px 20px;}
+header{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Parth Savaliya</h1>
+<nav>
+<a href="#profile">Profile</a>
+<a href="#academic">Academic</a>
+<a href="#projects">Projects</a>
+<a href="#certifications">Certifications</a>
+<a href="#internship">Internship</a>
+<a href="#achievements">Achievements</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section id="profile">
+<h2>Student Profile</h2>
+<div class="profile-box">
+<p><strong>Name:</strong> Parth Savaliya</p>
+<p><strong>Email:</strong> parthsavaliya150@gmail.com</p>
+<p><strong>Skills:</strong> C, C++, Java, Python, DBMS, DSA</p>
+</div>
+</section>
+
+<section id="academic">
+<h2>Academic Details</h2>
+<div class="card">
+<p><strong>Institute:</strong> SRM Institute of Technology</p>
+<table>
+<tr><th>Semester</th><th>SGPA</th></tr>
+<tr><td>Sem 1</td><td>9.8</td></tr>
+<tr><td>Sem 2</td><td>9.8</td></tr>
+<tr><td>Sem 3</td><td>10</td></tr>
+</table>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<h3>Compiler Backend Emulator</h3>
+<p>Online compiler to execute basic programs.</p>
+</div>
+
+<div class="card">
+<h3>Banking Management System</h3>
+<p>Website for managing account details securely.</p>
+</div>
+
+<div class="card">
+<h3>Hospital Patient Record System</h3>
+<p>Three-tier database architecture system.</p>
+</div>
+</section>
+
+<section id="certifications">
+<h2>Certifications</h2>
+<div class="card">
+<ul>
+<li>Data Structures – Coursera (2025)</li>
+<li>Java Programming – Coursera (2025)</li>
+<li>Python Programming – NPTEL (2025)</li>
+<li>Introduction to DBMS – NPTEL (2026)</li>
+</ul>
+</div>
+</section>
+
+<section id="internship">
+<h2>Internship</h2>
+<div class="card">
+<p><strong>Company:</strong> Corizo/Wipro</p>
+        <p><strong>Duration:</strong> May 2025 – July 2025</p>
+        <p><strong>Work Done:</strong></p>
+        <ul>
+            <li>Cyber Security </li>
+            <li>Hacking</li>
+        </ul>
+  </div>
+</section>
+
+<section id="achievements">
+<h2>Achievements</h2>
+<div class="card">
+<ul>
+<li>1st Rank in College Coding Contest</li>
+<li>Academic Excellence Award 2024</li>
+<li>200+ Problems Solved</li>
+</ul>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+
+<div class="card">
+
+<!-- Personal Contact Info -->
+<h3 style="margin-bottom:15px;">📌 Contact Information</h3>
+<p><strong>Email:</strong> parthsavaliya150@gmail.com</p>
+<p><strong>Phone:</strong> +91 9510963514</p>
+<p><strong>Location:</strong> Tiruchirappalli, India</p>
+<p><strong>LinkedIn:</strong> 
+<a href="https://www.linkedin.com/in/parth-savaliya-70486a329
+" target="_blank" style="color:#38bdf8;">View My LinkedIn Profile
+
+</a>
+</p>
+<p><strong>GitHub:</strong> 
+<a href="https://github.com/Parth070711" target="_blank" style="color:#38bdf8;">My Github Profile</a>
+</p>
+
+<hr style="margin:25px 0; border:1px solid #334155;">
+
+<!-- Contact Form -->
+<h3 style="margin-bottom:15px;">📨 Send Message</h3>
+
+<form id="contact-form">
+<input type="text" name="from_name" placeholder="Your Name" required>
+<input type="email" name="from_email" placeholder="Your Email" required>
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+<p id="success-message" style="margin-top:15px; color:#38bdf8;"></p>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 Parth Savaliya | All Rights Reserved</p>
+</footer>
+
+<button id="topBtn" onclick="scrollToTop()">↑</button>
+
+<script>
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const rect=sec.getBoundingClientRect();
+if(rect.top<window.innerHeight-100){
+sec.classList.add("show");
+}
+});
+});
+
+const topBtn=document.getElementById("topBtn");
+window.addEventListener("scroll",()=>{
+if(window.scrollY>200){
+topBtn.style.display="block";
+}else{
+topBtn.style.display="none";
+}
+});
+
+function scrollToTop(){
+window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+(function(){
+emailjs.init("PizZS9bEBgUffPzm1");   // 🔥 replace this
+})();
+
+document.getElementById("contact-form")
+.addEventListener("submit", function(event) {
+event.preventDefault();
+
+emailjs.sendForm(
+"service_k6f5exf",      // 🔥 replace this
+"template_j3vub6g",     // 🔥 replace this
+this
+)
+.then(function() {
+document.getElementById("success-message").innerText = 
+"Message sent successfully!";
+document.getElementById("contact-form").reset();
+}, function(error) {
+document.getElementById("success-message").innerText = 
+"Failed to send message. Try again.";
+});
+});
+</script>
+</body>
+</html>
