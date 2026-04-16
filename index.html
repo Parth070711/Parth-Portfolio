@@ -57,9 +57,8 @@ color:#38bdf8;
 /* SECTIONS */
 section{
 padding:80px;
-opacity:0;
-transform:translateY(40px);
-transition:all 0.8s ease;
+opacity:1;
+transform:none;
 }
 
 section.show{
@@ -235,58 +234,34 @@ header{flex-direction:column;text-align:center;}
 </div>
 </section>
 
-<ul class="cert-table">
+<section id="certifications">
+<h2>Certifications</h2>
 
-<li>
-  Data Structures – Coursera (2025)
-  <a href="assets/cert1.pdf#toolbar=0" target="_blank" class="view-btn">
-    View Certificate
-  </a>
-</li>
+<div class="card">
 
-<li>
-  Java Programming – Coursera (2025)
-  <a href="assets/cert2.pdf#toolbar=0" target="_blank" class="view-btn">
-    View Certificate
-  </a>
-</li>
-
-<li>
-  Python Programming – NPTEL (2025)
-  <a href="assets/cert3.pdf#toolbar=0" target="_blank" class="view-btn">
-    View Certificate
-  </a>
-</li>
-
-<li>
-  Introduction to DBMS – NPTEL (2026)
-  <a href="assets/cert4.pdf#toolbar=0" target="_blank" class="view-btn">
-    View Certificate
-  </a>
-</li>
-
-<li>
-  AI Basics
-  <a href="assets/cert5.pdf#toolbar=0" target="_blank" class="view-btn">
-    View Certificate
-  </a>
-</li>
-
-<li>
-  Cloud Computing
-  <a href="assets/cert6.pdf#toolbar=0" target="_blank" class="view-btn">
-    View Certificate
-  </a>
-</li>
-
-<li>
-  Web Development
-  <a href="assets/cert7.pdf#toolbar=0" target="_blank" class="view-btn">
-    View Certificate
-  </a>
-</li>
-
+<!-- Course Names Only -->
+<ul>
+<li>CORIZO</li>
+<li>COURSERA - DIFFERENTIAL EQUATIONS FOR ENGINEERS</li>
+<li>EDUSKILL - ANDROID DEVELPOER VIRTUAL INTERNSHIP</li>
+<li>HACKATHON - UNSTOP</li>
+<li>NPTEL - DATA SCIENCE FOR ENGINEERS</li>
+<li>ORACLE - FOUNDATION ASSOCIATE</li>
+<li>TATA - DATA VISUALIZATION</li>
+<li>UNSTOP - HACKATHON</li>
+<li>IBM - GETTING STARTED WITH ARTIFICIAL INTELLIGENCE</li>
+<li>SMARTATHON</li>
 </ul>
+
+<!-- ONE Button -->
+<div style="text-align:center; margin-top:20px;">
+<a href="CERT.pdf#toolbar=0" target="_blank" class="view-btn">
+View Certificate
+</a>
+</div>
+
+</div>
+</section>
 
 <section id="internship">
 <h2>Internship</h2>
@@ -359,15 +334,6 @@ header{flex-direction:column;text-align:center;}
 <button id="topBtn" onclick="scrollToTop()">↑</button>
 
 <script>
-const sections=document.querySelectorAll("section");
-window.addEventListener("scroll",()=>{
-sections.forEach(sec=>{
-const rect=sec.getBoundingClientRect();
-if(rect.top<window.innerHeight-100){
-sec.classList.add("show");
-}
-});
-});
 
 const topBtn=document.getElementById("topBtn");
 window.addEventListener("scroll",()=>{
